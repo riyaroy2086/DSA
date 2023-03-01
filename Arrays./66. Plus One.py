@@ -10,3 +10,7 @@ class Solution:
         digits[0] = 1
         digits.append(0)
         return digits
+
+    
+    
+    
