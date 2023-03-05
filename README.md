@@ -18,4 +18,3 @@ Sorting algorithms (Bubble Sort, Insertion Sort, Selection Sort, Merge Sort, Qui
 Searching algorithms (Linear Search, Binary Search)
 Graph algorithms (Breadth First Search, Depth First Search).
 
-![image](https://user-images.githubusercontent.com/93935688/222976940-d0fde65f-0b29-448d-9fd6-ec021d0b4cc8.png)
