@@ -1,6 +1,6 @@
 # DSA
 Data Structures and Algorithms
-This repository contains implementation of various data structures and algorithms in C++.
+This repository contains implementation of various data structures and algorithms in C++,JAVA,PYTHON,C
 
 Data Structures
 The following data structures have been implemented:
