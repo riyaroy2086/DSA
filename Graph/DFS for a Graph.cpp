@@ -31,7 +31,7 @@ then back to 0 then 0 to 3
 thus dfs will be 0 1 2 3. 
 
 Your task:
-You don't need to read input or print anything. Your task is to complete the function dfsOfGraph() which takes the integer V denoting the number of vertices and adjacency list as input parameters and returns a list containing the DFS traversal of the graph starting from the 0th vertex from left to right according to the graph.
+You don\'t need to read input or print anything. Your task is to complete the function dfsOfGraph() which takes the integer V denoting the number of vertices and adjacency list as input parameters and returns a list containing the DFS traversal of the graph starting from the 0th vertex from left to right according to the graph.
 
 
 Expected Time Complexity: O(V + E)
