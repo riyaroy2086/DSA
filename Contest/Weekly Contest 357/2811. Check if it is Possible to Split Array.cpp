@@ -35,3 +35,34 @@ Constraints:
 
 // SOLUTION _____________________>>>
 
+class Solution {
+public:
+    bool canSplitArray(vector<int>& nums, int m) {
+        int n = nums.size();
+//         std::vector<bool> dp(n + 1, false);
+//         dp[n] = true; // Initialize the last element to true
+
+//         int sum = 0; // Variable to store the current sum of elements
+
+//         // Iterate through the array from right to left
+//         for (int i = n - 1; i >= 0; i--) {
+//             sum += nums[i];
+
+//             // Check if it's possible to split the array into two subarrays
+//             // where at least one of the subarrays has a sum greater than or equal to m
+//             for (int j = i; j < n - 1; j++) {
+//                 if (sum - nums[j] >= m || dp[j + 1]) {
+//                     dp[i] = true;
+//                     break;
+//                 }
+//             }
+//         }
+
+//         // The result will be stored in the first element of dp
+//         return dp[0];
+        if(n <=2) return true;
+        for(int i=1;i<n;++i)
+            if(nums[i]+nums[i-1] >= m) return true;
+        return false;
+    }
+};
