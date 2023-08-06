@@ -42,3 +42,35 @@ s[0] != 'i'
 
 // SOLUTION ---------------------------------------------->>
 
+class Solution {
+public:
+    string finalString(string s) {
+        // stack<char> st;
+        // for(char c : s)
+        // {
+        //     if(c=='i')
+        //         if(!st.empty())
+        //             st.pop();
+        //         else
+        //             st.push(c);
+        // }
+        // string res;
+        // while(!st.empty())
+        // {
+        //     res= st.top()+res;
+        //     st.pop();
+        // }
+        // return res;
+        
+        // BRUTE FORCE
+        string res ="";
+        for(char ch :s)
+        {
+            if(ch=='i')
+                reverse(res.begin(),res.end());
+            else
+                res+=ch;
+        }
+        return res;
+    }
+};
