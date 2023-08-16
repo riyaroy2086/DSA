@@ -36,7 +36,7 @@ class Solution {
 
         if(root.left==null && root.right==null)  //checking if its the last node
         {
-            arr.add(s.substring(0,s.length()-2));  //adding the last node into the list
+            arr.add(s.substring(0,s.length()-2));  //adding the formed string into the list excluding the extra "->" in the end
             return;
         } 
 
