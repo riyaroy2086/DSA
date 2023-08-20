@@ -35,6 +35,9 @@ The above figure represents the given linked list. The modified list contains
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
+
+//-----------------------------------------------------------------code here---------------------------------------------------------------------------------//
+
 class Solution {
     public ListNode mergeNodes(ListNode head) {
 
