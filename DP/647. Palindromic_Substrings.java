@@ -16,6 +16,8 @@ Output: 6
 Explanation: Six palindromic strings: "a", "a", "a", "aa", "aa", "aaa".
 */
 
+//--------------------------------------------------------------------code here------------------------------------------------------------------------------//
+
 class Solution {
     public int countSubstrings(String s) {
 
