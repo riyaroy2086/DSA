@@ -68,8 +68,6 @@ class Solution {
 
         if(c>1) s+=c;  
 
-        System.out.println(s);
-
         for(int j=0;j<s.length();j++)
         {
             chars[j]=s.charAt(j);
