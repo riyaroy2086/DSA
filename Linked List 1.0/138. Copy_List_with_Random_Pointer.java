@@ -39,6 +39,7 @@ Output: [[3,null],[3,0],[3,null]]
 //---------------------------------------------------------------code here--------------------------------------------------------------------------------//
 
 /*
+/*
 // Definition for a Node.
 class Node {
     int val;
@@ -56,31 +57,75 @@ class Node {
 class Solution {
     public Node copyRandomList(Node head) {
 
-        HashMap<Node,Node> map=new HashMap<>();
+        //----------------------------------------------------------optimised approach-------------------------------------------------------------------//
+        
+        if(head==null) return head;
 
         Node curr=head;
 
         while(curr!=null)
         {
-            
-            Node newNode=new Node(curr.val);
+            Node temp=curr.next;
 
-            map.put(curr,newNode);
+            curr.next=new Node(curr.val);
 
-            curr=curr.next;
+            curr.next.next=temp;
+
+            curr=temp;
         }
 
-        Node ptr=head;
+        curr=head;
 
-        while(ptr!=null)
+        while(curr!=null)
         {
-            map.get(ptr).next=map.get(ptr.next);  //we can't directly use ptr.next as it would link it to the original list
-          
-            map.get(ptr).random=map.get(ptr.random);
-
-            ptr=ptr.next;
+            if(curr.next!=null)
+                curr.next.random=(curr.random!=null)?curr.random.next:null;
+            curr=curr.next.next;
         }
+
+        Node list=head;
+        Node cp=head.next;
+        Node ptr=cp;
+
+        while(list!=null)
+        {
+            list.next=list.next.next;
+            if(cp.next==null) break;
+            cp.next=cp.next.next;
+            list=list.next;
+            cp=cp.next;
+            
+        }
+
+
+        return ptr;
+
+        //--------------------------------------------------------------brute force approach-------------------------------------------------------------//
+
+        // HashMap<Node,Node> map=new HashMap<>();
+
+        // Node curr=head;
+
+        // while(curr!=null)
+        // {
+            
+        //     Node newNode=new Node(curr.val);
+
+        //     map.put(curr,newNode);
+
+        //     curr=curr.next;
+        // }
+
+        // Node ptr=head;
+
+        // while(ptr!=null)
+        // {
+        //     map.get(ptr).next=map.get(ptr.next);  //we can't directly use ptr.next as it would link it to the original list
+        //     map.get(ptr).random=map.get(ptr.random);
+
+        //     ptr=ptr.next;
+        // }
         
-        return map.get(head);
+        // return map.get(head);
     }
 }
